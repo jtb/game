@@ -41,9 +41,9 @@
 
   <script>
   $(document).bind('pageinit', function() {
-    $( "#sortable" ).sortable();
+    $( "#sortable" ).sortable({ scroll: true, scrollSensitivity: 100 });
+    <!--$( "#sortable" ).sortable();-->
     $( "#sortable" ).disableSelection();
-    $( "#sortable").sortable({ scroll: true, scrollSensitivity: 100 });
     <!-- Refresh list to the end of sort to have a correct display -->
     $( "#sortable" ).bind( "sortstop", function(event, ui) {
       $('#sortable').listview('refresh');
@@ -57,7 +57,7 @@
 <div>
   <div data-role="header" data-theme="d">
     <h1>Lina & Justin Photo Game</h1>
-    <h2>Order with Earliest First</h2>
+    <h2>Order Earliest First</h2>
     <h2>Good Luck!!</h2>
   </div>
 
