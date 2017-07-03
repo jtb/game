@@ -8,6 +8,14 @@
     .ui-state-highlight {
       height: 2.5em; line-height: 2.2em;
     }
+    .maindiv {
+      background-image: url('background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    li {
+      margin: 10px 0;
+    }
   </style>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
@@ -73,7 +81,7 @@
 
 <div style="width: 90%; overflow: hidden; padding-left: 10px">
     <div style="width: 40%; float: left;">
-      <button onclick="calcScore()" type="button">Score it!</button>
+      <button onclick="calcScore()" type="button" id="buttonid">Score it!</button>
     </div>
     <div style="margin-left: 45%;">
       <font size="24"><div id="demo">??%</div></font>
@@ -86,12 +94,12 @@
 </font>
 </div>
 
-
+<div style="overflow:auto; width:100vh" class="maindiv">
   <div style="float: left; width: 35%;" data-role="content" data-theme="c">
     <ul data-role="listview" data-inset="true" data-theme="d">
       <li class="unsortable" style="background:#999; color:white">As Babies</li>
     </ul>
-    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable" class="sortable">
+    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable" class="a">
       <!--<li data-role="list-divider">Can you put the photos in the correct time order?</li>-->
       <li>1</li>
       <li>2</li>
@@ -108,7 +116,7 @@
   </div>
   <div style="float: left; width: 35%;" data-role="content" data-theme="c">
     <center>...</center>
-    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable2" class="Sortable">
+    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable2" class="a">
       <li>11</li>
       <li>12</li>
       <li>13</li>
@@ -125,6 +133,6 @@
     </ul>
   </div>
 </div>
-
+</div>
 </body>
 </html>

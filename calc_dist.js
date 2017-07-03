@@ -50,4 +50,6 @@ function calcScore() {
     } else if (score >= 0) {
       document.getElementById("wisdom").innerHTML = "Remember, earliest first!";
     }
+    //document.getElementById("buttonid").innerHTML = "Try again!";
+    //$("#sortable").setStyle({display: "none"})
 }
