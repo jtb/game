@@ -1,6 +1,21 @@
 
 var correctOrder={1:0x1,2:0x2,3:0x3,4:0x4,5:0x5,6:0x6,7:0x7,8:0x8,9:0x9,10:0xa,11:0xb,12:0xc,13:0xd,14:0xe,15:0xf,16:0x10,17:0x11,18:0x12,19:0x13,20:0x14};
 
+function myFunction() {
+    var x = document.getElementById('alist');
+    var y = document.getElementById('alist2');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+	y.style.display = 'block';
+	
+	document.getElementById("buttonid").innerHTML = "Score it!";
+    } else {
+        x.style.display = 'none';
+        y.style.display = 'none';
+	document.getElementById("buttonid").innerHTML = "Try again!";
+    }
+}
+
 function calcScore() {
     var newNums = new Object();
 
@@ -50,6 +65,7 @@ function calcScore() {
     } else if (score >= 0) {
       document.getElementById("wisdom").innerHTML = "Remember, earliest first!";
     }
-    //document.getElementById("buttonid").innerHTML = "Try again!";
-    //$("#sortable").setStyle({display: "none"})
+
+    myFunction();
 }
+

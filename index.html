@@ -11,7 +11,7 @@
     .maindiv {
       background-image: url('background.jpg');
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
     }
     li {
       margin: 10px 0;
@@ -94,8 +94,8 @@
 </font>
 </div>
 
-<div style="overflow:auto; width:100%" class="maindiv">
-  <div style="float: left; width: 35%;" data-role="content" data-theme="c">
+<div style="overflow:auto; width:100vw; height:100vh" class="maindiv">
+  <div style="float: left; width: 35%;" data-role="content" data-theme="c" id="alist">
     <ul data-role="listview" data-inset="true" data-theme="d">
       <li class="unsortable" style="background:#999; color:white">As Babies</li>
     </ul>
@@ -114,7 +114,7 @@
     </ul>
     <center>...</center>
   </div>
-  <div style="float: left; width: 35%;" data-role="content" data-theme="c">
+  <div style="float: left; width: 35%;" data-role="content" data-theme="c" id="alist2">
     <center>...</center>
     <ul data-role="listview" data-inset="true" data-theme="d" id="sortable2" class="a">
       <li>11</li>
