@@ -6,14 +6,14 @@ function calcScore() {
 
     var listItems = $("#sortable li");
     listItems.each(function(idx, li) {
-            newNums[parseInt($(li).text(), 10)] = idx+1;
+            newNums[parseInt($(li).text(), 10)] = idx + 1;
 	});
 
-    var listItems2 = $("#sortable2 li");
+    var listItems2 = $("#sortable2 li").not(".unsortable");
     listItems2.each(function(idx, li) {
-            newNums[parseInt($(li).text(), 10)] = idx+1 + listItems.length;
+            newNums[parseInt($(li).text(), 10)] = idx + 1 + listItems.length;
 	});
-    console.log(newNums);
+
     inversions = 0;
     for (i = 1; i <= 20; i++) {
 	for(j = i+1;j<=20; j++) {
