@@ -1,6 +1,11 @@
 <!DOCTYPE html> 
 <html>
 <head>
+  <style>
+    ol.b {
+      list-style-position: inside;
+    }
+  </style>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -38,6 +43,7 @@
   $(document).bind('pageinit', function() {
     $( "#sortable" ).sortable();
     $( "#sortable" ).disableSelection();
+    $( "#sortable").sortable({ scroll: true, scrollSensitivity: 100 });
     <!-- Refresh list to the end of sort to have a correct display -->
     $( "#sortable" ).bind( "sortstop", function(event, ui) {
       $('#sortable').listview('refresh');
@@ -56,7 +62,7 @@
   </div>
 
   <div style="width: 50%;" data-role="content" data-theme="c">
-    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable">
+    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable" class="a">
       <!--<li data-role="list-divider">Can you put the photos in the correct time order?</li>-->
       <li>1</li>
       <li>2</li>
