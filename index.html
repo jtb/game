@@ -41,12 +41,17 @@
 
   <script>
   $(document).bind('pageinit', function() {
-    $( "#sortable" ).sortable({ scroll: true, scrollSensitivity: 100 });
-    <!--$( "#sortable" ).sortable();-->
+    <!--$( "#sortable" ).sortable({ scroll: true, scrollSensitivity: 100 });-->
+    $( "#sortable" ).sortable({connectWith: "#sortable2"});
     $( "#sortable" ).disableSelection();
+    $( "#sortable2" ).sortable({connectWith: "#sortable"});
+    $( "#sortable2" ).disableSelection();
     <!-- Refresh list to the end of sort to have a correct display -->
     $( "#sortable" ).bind( "sortstop", function(event, ui) {
       $('#sortable').listview('refresh');
+    });
+    $( "#sortable2" ).bind( "sortstop", function(event, ui) {
+      $('#sortable2').listview('refresh');
     });
   });
   </script>
@@ -56,12 +61,12 @@
 <body> 
 <div>
   <div data-role="header" data-theme="d">
-    <h1>Lina & Justin Photo Game</h1>
+    <h1>Photo Game</h1>
     <h2>Order Earliest First</h2>
     <h2>Good Luck!!</h2>
   </div>
 
-  <div style="width: 50%;" data-role="content" data-theme="c">
+  <div style="float: left; width: 45%;" data-role="content" data-theme="c">
     <ul data-role="listview" data-inset="true" data-theme="d" id="sortable" class="a">
       <!--<li data-role="list-divider">Can you put the photos in the correct time order?</li>-->
       <li>1</li>
@@ -74,6 +79,10 @@
       <li>8</li>
       <li>9</li>
       <li>10</li>
+    </ul>
+  </div>
+  <div style="float: right; width: 45%;" data-role="content" data-theme="c">
+    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable2" class="a">
       <li>11</li>
       <li>12</li>
       <li>13</li>
