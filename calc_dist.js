@@ -46,26 +46,28 @@ function calcScore() {
 
     document.getElementById("demo").innerHTML = score + "%";
 
-    if (score >= 90) {
+    if (score >=100) {
+      document.getElementById("wisdom").value = "WINNER! You know us really well.";
+    } else if (score >= 90) {
       document.getElementById("wisdom").value = "Wow, you are amazing!";
     } else if (score >= 80) {
-      document.getElementById("wisdom").innerHTML = "Great job! You know us well";
+      document.getElementById("wisdom").value = "Great job! You know us well";
     } else if (score >= 70) {
-      document.getElementById("wisdom").innerHTML = "Awesome! Enjoy another piece of cake";
+      document.getElementById("wisdom").value = "Awesome! Enjoy another piece of cake";
     } else if (score >= 60) {
-      document.getElementById("wisdom").innerHTML = "Pretty good. Have some wine";
+      document.getElementById("wisdom").value = "Pretty good. Have some wine";
     } else if (score >= 50) {
-      document.getElementById("wisdom").innerHTML = "Maybe numbers aren't your thing ;)";
+      document.getElementById("wisdom").value = "Maybe numbers aren't your thing ;)";
     } else if (score >= 40) {
-      document.getElementById("wisdom").innerHTML = "Keep trying! You got this.";
+      document.getElementById("wisdom").value = "Keep trying! You got this.";
     } else if (score >= 30) {
-      document.getElementById("wisdom").innerHTML = "Whew, this is tough!";
+      document.getElementById("wisdom").value = "Whew, this is tough!";
     } else if (score >= 20) {
-      document.getElementById("wisdom").innerHTML = "You're at the correct wedding, right?";
+      document.getElementById("wisdom").value = "You're at the correct wedding, right?";
     } else if (score >= 10) {
-      document.getElementById("wisdom").innerHTML = "Did you just guess randomly?";
+      document.getElementById("wisdom").value = "Did you just guess randomly?";
     } else if (score >= 0) {
-      document.getElementById("wisdom").innerHTML = "Remember, earliest first!";
+      document.getElementById("wisdom").value = "Remember, earliest first!";
     }
 
     myFunction();
