@@ -52,19 +52,25 @@
 
   <script>
   $(document).bind('pageinit', function() {
-    <!--$( "#sortable" ).sortable({ scroll: true, scrollSensitivity: 100 });-->
+    $( "#sortable" ).sortable({placeholder: "ui-state-highlight", items: "li:not(.unsortable)"});
+    $( "#sortable" ).disableSelection();
+<!--
+    $( "#sortable" ).sortable({ scroll: true, scrollSensitivity: 100 });
     $( "#sortable" ).sortable({connectWith: "#sortable2", placeholder: "ui-state-highlight", items: "li:not(.unsortable)"});
     $( "#sortable" ).disableSelection();
     $( "#sortable2" ).sortable({connectWith: "#sortable", placeholder: "ui-state-highlight", items: "li:not(.unsortable)"});
     $( "#sortable2" ).disableSelection();
+-->
     <!-- Refresh list to the end of sort to have a correct display -->
 
     $( "#sortable" ).bind( "sortstop", function(event, ui) {
       $('#sortable').listview('refresh');
     });
+<!--
     $( "#sortable2" ).bind( "sortstop", function(event, ui) {
       $('#sortable2').listview('refresh');
     });
+-->
   });
 
   </script>
@@ -89,15 +95,23 @@
 </div>
 <div style="padding-left: 10px">
 <font size="10">
-<div id="wisdom">
+<div id="stuff">
 </div>
 </font>
 </div>
 
 <div style="overflow:auto; width:100vw; height:100vh" class="maindiv">
-  <div style="float: left; width: 35%;" data-role="content" data-theme="c" id="alist">
+  <div id="wisdom" style="display: none;">
+    <div style="margin: auto; align: center; width: 70%;" data-role="content" data-theme="c">
+      <font color="white" size="18">WOW Great Job!!!!</font>
+    </div>
+    <div style="margin: auto; align: center; width: 20%;" data-role="content" data-theme="c">
+     <button onclick="myFunction()" type="button" id="buttonid">Keep Trying!</button>
+    </div>
+  </div>
+  <div style="margin: auto; width: 35%;" data-role="content" data-theme="c" id="alist">
     <ul data-role="listview" data-inset="true" data-theme="d">
-      <li class="unsortable" style="background:#999; color:white">As Babies</li>
+      <li class="unsortable" style="background:#999; color:white">From then...</li>
     </ul>
     <ul data-role="listview" data-inset="true" data-theme="d" id="sortable" class="a">
       <!--<li data-role="list-divider">Can you put the photos in the correct time order?</li>-->
@@ -111,12 +125,6 @@
       <li>8</li>
       <li>9</li>
       <li>10</li>
-    </ul>
-    <center>...</center>
-  </div>
-  <div style="float: left; width: 35%;" data-role="content" data-theme="c" id="alist2">
-    <center>...</center>
-    <ul data-role="listview" data-inset="true" data-theme="d" id="sortable2" class="a">
       <li>11</li>
       <li>12</li>
       <li>13</li>
@@ -127,9 +135,14 @@
       <li>18</li>
       <li>19</li>
       <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
     </ul>
     <ul data-role="listview" data-inset="true" data-theme="d">
-      <li class="unsortable" style="background:#999; color:white">Wedding Day!</li>
+      <li class="unsortable" style="background:#999; color:white">...'til now</li>
     </ul>
   </div>
 </div>
