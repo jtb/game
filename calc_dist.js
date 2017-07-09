@@ -47,27 +47,27 @@ function calcScore() {
     document.getElementById("demo").innerHTML = score + "%";
 
     if (score >=100) {
-      document.getElementById("wisdom").value = "WINNER! You know us really well.";
+      document.getElementById("wisdomt").innerHTML = "WINNER!! You rock";
     } else if (score >= 90) {
-      document.getElementById("wisdom").value = "Wow, you are amazing!";
+      document.getElementById("wisdomt").innerHTML = "Great job. You know us very well!";
     } else if (score >= 80) {
-      document.getElementById("wisdom").value = "Great job! You know us well";
+      document.getElementById("wisdomt").innerHTML = "That deserves another piece of cake";
     } else if (score >= 70) {
-      document.getElementById("wisdom").value = "Awesome! Enjoy another piece of cake";
+      document.getElementById("wisdomt").innerHTML = "Awesome! You almost got it";
     } else if (score >= 60) {
-      document.getElementById("wisdom").value = "Pretty good. Have some wine";
+      document.getElementById("wisdomt").innerHTML = "Keep at it. You can do it!";
     } else if (score >= 50) {
-      document.getElementById("wisdom").value = "Maybe numbers aren't your thing ;)";
+      document.getElementById("wisdomt").innerHTML = "Not half bad.";
     } else if (score >= 40) {
-      document.getElementById("wisdom").value = "Keep trying! You got this.";
+      document.getElementById("wisdomt").innerHTML = "Are you just guessing randomly?";
     } else if (score >= 30) {
-      document.getElementById("wisdom").value = "Whew, this is tough!";
+      document.getElementById("wisdomt").innerHTML = "You know the bride and groom ,right?";
     } else if (score >= 20) {
-      document.getElementById("wisdom").value = "You're at the correct wedding, right?";
+      document.getElementById("wisdomt").innerHTML = "Mmm, maybe try with your eyes open";
     } else if (score >= 10) {
-      document.getElementById("wisdom").value = "Did you just guess randomly?";
+      document.getElementById("wisdomt").innerHTML = "LOL, really?";
     } else if (score >= 0) {
-      document.getElementById("wisdom").value = "Remember, earliest first!";
+      document.getElementById("wisdomt").innerHTML = "Remember, earliest first!";
     }
 
     myFunction();
