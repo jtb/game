@@ -1,5 +1,7 @@
 
-var correctOrder={1:0x1,2:0x2,3:0x3,4:0x4,5:0x5,6:0x6,7:0x7,8:0x8,9:0x9,10:0xa,11:0xb,12:0xc,13:0xd,14:0xe,15:0xf,16:0x10,17:0x11,18:0x12,19:0x13,20:0x14};
+//var correctOrder={1:0x1,2:0x2,3:0x3,4:0x4,5:0x5,6:0x6,7:0x7,8:0x8,9:0x9,10:0xa,11:0xb,12:0xc,13:0xd,14:0xe,15:0xf,16:0x10,17:0x11,18:0x12,19:0x13,20:0x14};
+
+var correctOrder={15:1,2:2,25:3,24:4,6:5,7:6,4:7,21:8,17:9,23:10,3:11,19:12,16:13,10:14,18:15,13:16,11:17,22:18,9:19,26:20,27:21,14:22,8:23,1:24,5:25,12:26,20:27};
 
 function myFunction() {
     var x = document.getElementById('alist');
@@ -32,8 +34,8 @@ function calcScore() {
     //});
 
     inversions = 0;
-    for (i = 1; i <= 20; i++) {
-	for(j = i+1;j<=20; j++) {
+    for (i = 1; i <= 27; i++) {
+	for(j = i+1;j<=27; j++) {
 	    if (newNums[i] > newNums[j] && correctOrder[i] < correctOrder[j]) {
 		inversions = inversions + 1;
 	    } else if (newNums[i] < newNums[j]&& correctOrder[i] > correctOrder[j]) {
@@ -41,7 +43,7 @@ function calcScore() {
             }
 	}
     }
-    var score = 100*(1-inversions/190);
+    var score = 100*(1-inversions/351);
     score = score.toFixed(2);
 
     document.getElementById("demo").innerHTML = score + "%";
